@@ -1,20 +1,22 @@
 body
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Gotham Pro'
     padding: 0
     margin: 0
-    color: #ffffff
+    color: #000000
     font-size: 1rem
-    min-height: 100%
+    height: 100%
     & * 
         box-sizing: border-box
         
 html
     scroll-behavior: smooth
     height: 100%
+
 select, input, textarea, button
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Gotham Pro'
 
 ul, ol, h1, h2, h3, h4, a
+    color: #000000
     list-style: none
     padding: 0
     margin: 0
@@ -25,13 +27,12 @@ ul, ol, h1, h2, h3, h4, a
     width: 100%
     height: 100%
     overflow: hidden
-    scroll-behavior: smooth
     display: flex
     flex-direction: column
 
 .wrapper
     width: 100%
-    max-width: 1301px
+    max-width: 1232px
     margin: 0 auto
     position: relative
     padding-left: 1rem
@@ -40,13 +41,6 @@ ul, ol, h1, h2, h3, h4, a
     flex-direction: column
     align-items: center
 
-// ошибка в формах
-.form-error
-    font-size: 13px
-    position: absolute
-    bottom: -19px
-    left: 0
-    color: red
 
 // buttons, inputs=================================================================================================================================
 
@@ -69,7 +63,6 @@ input, textarea
 a
     &:active
         outline: none
-        opacity: 0.8
     &:focus
         outline: none
     
@@ -78,98 +71,14 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 
 // text==============================================================================================================================================
 p
-    letter-spacing: 0.3px
     margin: 0
     padding: 0
     font-size: 1rem
-    line-height: 1.5rem
+    line-height: 150%
     font-weight: normal
     +until-tablet
         font-size: 0.875rem
-span
-    font-size: 1rem
-
-// .header1
-//     font-size: 109px
-//     line-height: 98px
-//     color: #fff
-//     font-family: Jikharev
-//     font-weight: 400
-//     letter-spacing: 0.5px
-//     +until-desktop
-//         font-size: 90px
-//         line-height: 65px
-//         max-width: 650px
-//     +until-tablet
-//         font-size: 75px
-//     +media-until(450px)
-//         font-size: 55px
-//         line-height: 50px
-//     +media-until(374px)
-//         font-size: 50px
-//         line-height: 45px
-
-// .header2
-//     font-size: 3.125rem
-//     line-height: 100%
-//     color: $text3c
-//     font-family: Montserrat
-//     font-weight: 600
-//     &.cursive
-//         letter-spacing: 0.5px
-//         font-size: 80px
-//         font-family: Jikharev
-//         font-weight: 400
-//         +until-tablet
-//             text-align: center
-//             font-size: 55px
-//         +while-mob
-//             font-size: 42px
-//     +until-tablet  
-//         font-size: 2.5rem
-//     +while-mob
-//         font-size: 2rem
-//         text-align: center
-// .header3
-//     font-size: 1.25rem
-//     font-weight: bold
-
-
-.title
-    font-family: Montserrat
-    font-weight: 600
-    color: $text3c
-    &.title-1
-        font-size: 50px
-        line-height: 55px
-        +until-tablet
-            font-size: 36px
-            line-height: 100%
-        +while-mob
-            font-size: 30px
-            line-height: 115%
-    &.title-2
-        font-size: 36px
-        line-height: 46px
-        +until-tablet
-            font-size: 24px
-            line-height: 36px
-        +while-mob
-            font-size: 22px
-            line-height: 115%
-    &.title-3
-        font-size: 19px
-        line-height: 24px
-        +until-tablet
-            font-size: 16px
-            line-height: 22px
-    &.title-cursive
-            letter-spacing: 0.5px
-            font-size: 80px
-            font-family: Jikharev
-            font-weight: 400
-            +until-tablet
-                text-align: center
-                font-size: 55px
-            +while-mob
-                font-size: 42px
+h2
+    font-size: 2.5rem
+    line-height: 120%
+    text-align: center

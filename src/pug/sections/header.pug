@@ -1,0 +1,14 @@
+header.header
+    .wrapper
+        a.header__logo(href="/")
+                +svg('img-logo')
+        nav.header__nav
+            a.header__nav-item(href="#advantages") Преимущества
+            a.header__nav-item(href="#comparison") Сравнение
+            a.header__nav-item(href="#types") Виды пленки
+            a.header__nav-item(href="#instruction") Инструкция
+        .header__contacts
+            a.header__contacts-phone(href="tel:8 965-765-64-65")
+                +svg('img-phone')
+                span 8 965-765-64-65
+            button.header__contacts-callback Заказать звонок

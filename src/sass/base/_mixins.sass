@@ -2,6 +2,7 @@ $desktop-min: 1024px
 $widescreen-min: 1440px
 $mobile-max: 425px
 $tablet-max: 768px
+
 // -==========================================================================================================
 @mixin from-tablet()
     @media screen and ( min-width: $tablet-max)
@@ -107,8 +108,8 @@ $tablet-max: 768px
 
 @keyframes autofill 
     to 
-    color: inherit
-    background-color: transparent
+        color: inherit
+        background-color: transparent
 
 @mixin autofill()
     &:-webkit-autofill 
