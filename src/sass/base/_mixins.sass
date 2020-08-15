@@ -1,0 +1,133 @@
+$desktop-min: 1024px
+$widescreen-min: 1440px
+$mobile-max: 425px
+$tablet-max: 768px
+// -==========================================================================================================
+@mixin from-tablet()
+    @media screen and ( min-width: $tablet-max)
+        @content
+
+@mixin from-desktop()
+    @media screen and ( min-width: $desktop-min)
+        @content
+
+@mixin from-widescreen()
+    @media screen and ( min-width: $widescreen-min)
+        @content
+
+@mixin from-mob()
+    @media screen and ( min-width: $mobile-max + 1 )
+        @content
+    
+// -==========================================================================================================
+@mixin while-mob()
+    @media screen and ( max-width: $mobile-max  )
+        @content
+
+@mixin until-tablet()
+    @media screen and ( max-width: $tablet-max)
+        @content
+
+@mixin until-desktop()
+    @media screen and ( max-width: $desktop-min - 1)
+        @content
+
+@mixin until-widescreen()
+    @media screen and ( max-width: $widescreen-min - 1)
+        @content
+
+// -==========================================================================================================
+@mixin media-until($width)
+    @media screen and ( max-width: $width)
+        @content
+
+@mixin media-from($width)
+    @media screen and ( min-width: $width)
+        @content
+
+// -==========================================================================================================
+@mixin placeholder() 
+    &::-webkit-input-placeholder  
+        @content
+    &:-moz-placeholder            
+        @content
+    &::-moz-placeholder           
+        @content
+    &:-ms-input-placeholder       
+        @content 
+// -==========================================================================================================
+@mixin scroll()
+    &::-webkit-scrollbar /* 1 - скроллбар */
+        appearance: none
+        -webkit-appearance: none
+        &:horizontal
+            height: 10px
+    &::-webkit-scrollbar-button  /* 2 - кнопка */
+    &::-webkit-scrollbar-track /* 3 - трек */
+        padding: 0 2px
+        border-radius: 2px
+        background: $darkBlue
+        //box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.56)
+    &::-webkit-scrollbar-track-piece   /* 4 - видимая часть трека */
+    &::-webkit-scrollbar-thumb /* 5 - ползунок */
+        background-color: $mainYellow
+        border-radius: 2px
+        border: 4px solid  $darkBlue
+    &::-webkit-scrollbar-corner        /* 6 - уголок */
+    &::-webkit-resizer                 /* 7 - изменение размеров окна*/
+// -==========================================================================================================
+
+@mixin doubleborder()
+    &::after
+        content: ""
+        border-bottom: 1px solid white
+        display: block
+        height: 1px
+        position: absolute
+        bottom: -1px
+        transition: all .2s linear
+        width: 0
+        right: 0
+    &:hover::after
+        width: 50%
+        right: 50%
+    &::before
+        content: ""
+        border-bottom: 1px solid white
+        display: block
+        height: 1px
+        position: absolute
+        bottom: -1px
+        transition: all .16s linear
+        width: 0
+        left: 0
+    &:hover::before
+        width: 100%
+        left: 0
+
+@keyframes autofill 
+    to 
+    color: inherit
+    background-color: transparent
+
+@mixin autofill()
+    &:-webkit-autofill 
+        animation-name: autofill
+        animation-fill-mode: both
+    &:-internal-autofill-selected 
+        background-color: transparent !important
+        animation-name: autofill
+        animation-fill-mode: both
+    &:-webkit-autofill
+        box-shadow: 0 0 0 1000px $darkBlue inset!important
+        color: #fff!important
+        -webkit-text-fill-color: #fff !important
+    &:-webkit-autofill:focus
+        box-shadow: 0 0 0 1000px $darkBlue inset!important
+        color: #fff!important
+        -webkit-text-fill-color: #fff !important
+    &:-webkit-autofill:hover
+        box-shadow: 0 0 0 1000px $darkBlue inset!important
+        color: #fff!important
+        -webkit-text-fill-color: #fff !important
+
