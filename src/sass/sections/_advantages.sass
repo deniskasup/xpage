@@ -1,0 +1,56 @@
+.advantages
+    top: -10px
+    position: relative
+    background-color: $light-blue
+    padding-bottom: 120px
+    margin-bottom: 118px
+    +until-tablet
+        margin-bottom: 80px
+        padding-bottom: 80px
+    &__bg-wave
+        transform: rotate(180deg)
+        position: absolute
+        bottom: -40px
+        +media-from(1920px)
+            width: 100vw
+    &__title
+        margin-bottom: 87px
+        +until-tablet
+            margin-bottom: 50px
+    &__list
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr))
+        grid-column-gap: 45px
+        grid-row-gap: 105px
+        +until-tablet
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
+            grid-column-gap: 35px
+            grid-row-gap: 45px
+    &__item
+        width: 100%
+        display: flex
+        align-items: center
+        &:first-of-type
+            & .advantages__item-img
+                & svg
+                    max-width: 86px
+        &-img
+            flex-shrink: 0
+            margin-right: 30px
+            width: 86px
+            height: 69px
+            display: flex
+            justify-content: center
+            & svg
+                width: 100%
+                max-width: 70px
+                height: 100%
+                fill: transparent
+        &-text
+            font-size: 18px
+            line-height: 24px
+            font-weight: bold
+            max-width: 255px
+            +media-until(374px)
+                font-size: 16px

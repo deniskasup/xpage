@@ -1,0 +1,60 @@
+.mobilemenu
+    z-index: 10
+    position: fixed
+    top: 0
+    right: -100%
+    opacity: 0
+    width: 190px
+    padding: 15px
+    padding-top: 100px
+    background: $blue
+    height: 100vh
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+    transition-duration: .35s
+    transition-property: right, opacity 
+    &.active
+        right: 0
+        opacity: 1
+    &__nav
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 40px
+        &-item
+            color: white
+            font-weight: bold
+            font-size: 16px
+            transition: color .3s
+            margin-bottom: 15px
+            &.active
+                color: $yellow
+            &:hover
+                color: $yellow
+    &__contacts
+        width: 100%
+        max-width: 325px
+        display: flex
+        flex-direction: column
+        align-items: center
+        &-phone
+            display: flex
+            align-items: center
+            margin-bottom: 15px
+            &:hover
+                & span
+                    border-bottom-color: currentColor
+            & span
+                color: white
+                transition: border-bottom-color .3s
+                font-weight: 500
+                font-size: 14px
+                border-bottom: 1px solid transparent
+            & svg
+                margin-right: 10px
+                width: 10px
+                height: 10px
+
+        &-callback
+            @extend %callback-button
+            max-width: 150px

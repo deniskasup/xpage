@@ -1,0 +1,64 @@
+@mixin transition
+    @for $i from 1 through 50
+        &:nth-child(#{$i})
+            transition: transform 1s #{$i * 0.08}s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+input.hamburger
+    display: none
+    &:checked
+        & ~ .mobilemenu
+            transform: translatex(0)
+            border-bottom-right-radius: 0
+            li
+                transform: translatex(0)
+                +transition
+                a
+                    padding-right: 15px
+        & ~ label
+            position: fixed
+            top: 35px
+            right: 16px
+            > i
+                background-color: transparent !important
+                transform: rotate(90deg)
+                &:before
+                    background: $yellow
+                    transform: translate(-50%, -50%) rotate(315deg)
+                &:after
+                    background: $yellow
+                    transform: translate(-50%, -50%) rotate(-315deg)
+                
+label.hamburger
+    z-index: 999
+    position: relative
+    display: block
+    top: -3px
+    height: 26px
+    width: 32px
+    &:hover
+        cursor: pointer
+    > i
+        position: absolute
+        width: 100%
+        height: 3px
+        top: 50%
+        background-color: $yellow
+        pointer-events: auto
+        transition-duration: .35s
+        transition-delay: .35s
+        &:before,
+        &:after
+            position: absolute
+            display: block
+            width: 100%
+            height: 3px
+            left: 50%
+            background-color: $yellow
+            content: ""
+            transition: transform 0.35s
+            transform-origin: 50% 50%
+        &:before
+            transform: translate(-50%, -10px)
+        &:after
+            transform: translate(-50%, 10px)
+
+

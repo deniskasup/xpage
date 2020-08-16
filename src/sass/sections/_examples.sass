@@ -1,0 +1,32 @@
+.examples
+    &__title
+        margin-bottom: 90px
+        max-width: 635px
+    &__slider
+        width: 100%
+        &.swiper-container
+            overflow: initial
+        & .swiper-wrapper
+            overflow: hidden
+        & > .examples__slider-pagination.swiper-pagination
+            bottom: -65px
+            & .swiper-pagination-bullet
+                width: 6px
+                height: 6px
+        &-button
+            
+        &-buttons
+            & .swiper-button
+                &-next
+                    right: -81px
+                    &::after
+                        font-size: 26px
+                        font-weight: bold
+                &-prev
+                    left: -81px
+                    &::after
+                        font-size: 26px
+                        font-weight: bold
+    &__slide
+        max-width: 278px
+        height: 278px

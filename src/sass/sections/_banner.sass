@@ -1,26 +1,91 @@
 .banner
     position: relative
+    min-height: 720px
+    margin-bottom: 95px
+    +until-desktop
+        margin-bottom: 60px
+    +while-mob
+        min-height: 100vh
     &__bg-img
         left: -30px
         position: absolute
+        +until-desktop
+            display: none
     &__video
-        z-index: 0
-        background: #204B67
         position: absolute
+        top: 0
+        right: 0
+        width: 955px
+        height: 725px
+        background: #204B67
+        +media-until(1600px)
+            right: -150px
+        +media-until(1400px)
+            right: -300px
+            top: -100px
+        +media-until(1100px)
+            width: 830px
+        +until-desktop
+            width: 100vw
+            top: 0
+            right: 0
+        +while-mob  
+            height: 100%
+        &-play
+            position: absolute
+            bottom: 140px
+            left: 47px
+            z-index: 5
+            width: 120px
+            height: 120px
+            +until-desktop
+                left: 16px
+                bottom: 20px
+            +until-tablet
+                transform: scale(0.8)
+            &:hover
+                svg
+                    fill-opacity: 1
+            & svg
+                transition: fill-opacity .3s
+                fill-opacity: .4
+                width: 100%
+                height: 100%
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
         &::before
             z-index: 1
             position: absolute
             bottom: 0
-            left: 0
+            left: -1px
             width: 1500px
             height: 1500px
-            background: white url('../../assets/img/banner-video-mask.svg') no-repeat center
+            background: url('../../assets/img/banner-video-mask.svg') no-repeat bottom left
             content: ''
+            +media-until(1100px)
+                width: 1300px
+                height: 1300px
+            +until-desktop
+                display: none
     &__content
+        z-index: 2
         margin-top: 287px
         align-self: flex-start
         width: 100%
         max-width: 509px
+        padding-bottom: 150px
+        +media-until(1600px)
+            margin-top: 200px
+        +media-until(1200px)
+            max-width: 480px
+        +until-desktop
+            margin-top: 180px
+        & *
+            +until-desktop
+                color: white
+                text-shadow: 1px 1px 2px black
     &__title
         text-align: left
         margin-bottom: 40px
