@@ -5,13 +5,14 @@
     "main": "index.js",
     "scripts": {
         "start": "parcel src/pug/index.pug --open",
-        "build": "parcel build src/index.pug -d docs --public-url ./"
+        "build": "parcel build src/pug/index.pug -d docs --public-url ./"
     },
     "author": "Deniskasup",
     "license": "ISC",
     "dependencies": {
         "@fancyapps/fancybox": "^3.5.7",
         "autoprefixer": "^9.8.6",
+        "cssnano": "^4.1.10",
         "jquery": "^3.5.1",
         "postcss-sort-media-queries": "^1.7.26",
         "pug": "^3.0.0",
