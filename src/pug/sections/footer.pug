@@ -1,0 +1,30 @@
+footer.footer
+	.footer__top  
+		.wrapper
+			a.footer__logo(href="/")
+				+svg('img-logo')
+			nav.footer__nav
+				a.footer__nav-item(href="#advantages") Преимущества
+				a.footer__nav-item(href="#comparison") Сравнение
+				a.footer__nav-item(href="#types") Виды пленки
+				a.footer__nav-item(href="#instruction") Инструкция
+			.footer__contacts
+				a.footer__contacts-phone(href="tel:8 965-765-64-65")
+					+svg('img-phone')
+					span 8 965-765-64-65
+				button.footer__contacts-callback Заказать звонок
+	.footer__bottom
+		.wrapper
+			.footer__copyright
+				span © 2019 «SLK»
+				a(href="#") Политика конфиденциальности
+			.footer__social
+				a(href="#") 
+					+svg('img-vk2','0 0 36 36')
+				a(href="#") 
+					+svg('img-inst','0 0 36 36')
+				a(href="#") 
+					+svg('img-face','0 0 36 36')
+			.footer__xpage
+				a(href="#") 
+					+svg('img-xpage')

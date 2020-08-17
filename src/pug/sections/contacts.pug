@@ -1,0 +1,36 @@
+section.contacts
+    .wrapper
+        .contacts__content
+            h2.contacts__title Контакты
+            .contacts__list
+                .contacts__list-item.wide
+                    .contacts__list-item-img
+                        +svg('img-place')
+                    .contacts__list-item-text
+                        span Офис
+                        strong Химкинский бульвар 9 офис 7
+                        span Адрес производителя
+                        strong 317, B3, Yanning Tower, Dongyu Yanningyuan, Liuyang, Hunan Province, China
+        
+                .contacts__list-item
+                    .contacts__list-item-img
+                        +svg('img-mail')
+                    .contacts__list-item-text
+                        span E-mail
+                        a(href="mailto:email@gmail.com") 
+                            strong email@gmail.com
+                .contacts__list-item
+                    .contacts__list-item-img
+                        +svg('img-phone')
+                    .contacts__list-item-text
+                        span Телефон
+                        a(href="tel:+ 7 (900) 099-99-00")
+                            strong + 7 (900) 099-99-00
+
+            .contacts__social
+                a(href="#") 
+                    +svg('img-telegram','0 0 31 31')
+                a(href="#") 
+                    +svg('img-viber','0 0 31 31')
+                a(href="#") 
+                    +svg('img-vk','0 0 31 31')

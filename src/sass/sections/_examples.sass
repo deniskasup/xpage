@@ -1,32 +1,52 @@
 .examples
+    margin-bottom: 100px
     &__title
         margin-bottom: 90px
         max-width: 635px
+        +until-tablet
+            margin-bottom: 60px
     &__slider
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
         width: 100%
-        &.swiper-container
-            overflow: initial
-        & .swiper-wrapper
-            overflow: hidden
+        &-button
+            +media-until(1366px)
+                position: static
+        & .swiper-container
+            width: 100%
         & > .examples__slider-pagination.swiper-pagination
             bottom: -65px
             & .swiper-pagination-bullet
                 width: 6px
                 height: 6px
-        &-button
-            
+                &:not(:last-of-type)
+                    margin-right: 4px
         &-buttons
+            display: flex
+            align-items: center
+            +media-until(1366px)
+                margin-bottom: 30px
             & .swiper-button
+                
                 &-next
                     right: -81px
+                    +media-until(1366px)
+                        margin-left: 15px
+                        position: static
                     &::after
                         font-size: 26px
                         font-weight: bold
                 &-prev
                     left: -81px
+                    +media-until(1366px)
+                        position: static
                     &::after
                         font-size: 26px
                         font-weight: bold
     &__slide
+        border-radius: 10px
+        overflow: hidden
         max-width: 278px
-        height: 278px
+        margin-right: 30px

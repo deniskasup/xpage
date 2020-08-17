@@ -1,18 +1,19 @@
 section.examples
     .wrapper
         h2.examples__title Примеры использования плёнки на микроприсосках
-        .examples__slider.swiper-container
+        .examples__slider
             .examples__slider-buttons
                 .swiper-button-prev.examples__slider-button
                 .swiper-button-next.examples__slider-button
+            .swiper-container
+                .swiper-wrapper
+                    .examples__slide.swiper-slide
+                        img.examples__slide-img(src="../../assets/img/examples/example1.png", alt="")
+                    .examples__slide.swiper-slide
+                        img.examples__slide-img(src="../../assets/img/examples/example2.png", alt="")
+                    .examples__slide.swiper-slide
+                        img.examples__slide-img(src="../../assets/img/examples/example3.png", alt="")
+                    .examples__slide.swiper-slide
+                        img.examples__slide-img(src="../../assets/img/examples/example4.png", alt="")
 
-            .swiper-wrapper
-                .examples__slide.swiper-slide
-                    img.examples__slide-img(src="../../assets/img/examples/example1.png", alt="")
-                .examples__slide.swiper-slide
-                    img.examples__slide-img(src="../../assets/img/examples/example2.png", alt="")
-                .examples__slide.swiper-slide
-                    img.examples__slide-img(src="../../assets/img/examples/example3.png", alt="")
-                .examples__slide.swiper-slide
-                    img.examples__slide-img(src="../../assets/img/examples/example4.png", alt="")
             .examples__slider-pagination.swiper-pagination
