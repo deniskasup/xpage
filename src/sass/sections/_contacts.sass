@@ -1,36 +1,119 @@
 .contacts
+    background: white
+    position: relative
+    padding-top: 100px
+    +until-tablet
+        padding-top: 50px
+    &__map
+        z-index: 1
+        right: 0
+        bottom: 0
+        width: 900px
+        height: 740px
+        position: absolute
+        +media-until(1500px)
+            width: 750px
+            height: 650px
+        +media-until(1250px)
+            height: 700px
+            right: -140px
+        +media-until(1100px)
+            height: 620px
+            right: -160px
+            width: 700px
+        +media-until(960px)
+            position: relative
+            width: 100vw
+            height: 400px
+            bottom: 0
+            left: 0
+        &::before
+            pointer-events: none
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+            width: 100%
+            height: 100%
+            background: url('../../assets/img/map-mask.svg') no-repeat
+            +media-until(960px)
+                background: url('../../assets/img/map-mask-mobile.svg') no-repeat
+                background-size: contain
     &__content
         width: 100%
         align-self: flex-start
         max-width: 430px
+        margin-bottom: 168px
+        +media-until(960px)
+            margin-bottom: 30px
     &__title
         text-align: left
         margin-bottom: 78px
+        +until-tablet
+            margin-bottom: 45px
     &__list
         width: 100%
         display: grid
         grid-row-gap: 40px
         grid-column-gap: 10px
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+        +until-desktop
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+        +while-mob
+            grid-row-gap: 30px
         &-item
             display: flex
             padding-bottom: 19px
+            +while-mob
+                padding-bottom: 0px
             &.wide
                 grid-column: span 2
                 border-bottom: 1px solid  #EFEFEF
+                +until-desktop
+                    grid-column: span 1
+                    border-bottom: 0
             &-img
                 margin-right: 20px
                 flex-shrink: 0
                 width: 15px
                 height: 15px
                 & svg
+                    fill: $yellow
                     width: 100%
                     height: 100%
+                    
             &-text
                 display: flex
                 flex-direction: column
                 max-width: 324px
+                & a
+                    width: max-content
+                    &:hover
+                        strong
+                            border-bottom-color: currentColor
                 & span
                     margin-bottom: 10px
                 & strong
+                    transition: border-bottom-color .3s
+                    border-bottom: 1px solid transparent
                     margin-bottom: 26px
+                    +while-mob
+                        margin-bottom: 20px
+    &__social
+        margin-top: 20px
+        margin-left: 35px
+        display: flex
+        align-items: center
+        & a
+            width: 31px
+            height: 31px
+            &:hover
+                svg
+                    fill: #f8ca4a
+            & svg
+                transition: fill .3s
+                width: 100%
+                height: 100%
+                fill: $yellow
+            &:not(:last-of-type)
+                margin-right: 11px

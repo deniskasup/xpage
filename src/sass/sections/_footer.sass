@@ -1,5 +1,5 @@
 .footer
-    padding: 33px 0 75px
+    padding: 40px 0 75px
     background: #204B67
     &__top
         width: 100%
@@ -78,6 +78,10 @@
         &-callback
             margin-top: 5px
             color: $blue
+            transition: border-bottom-color .3s
+            border-bottom: 1px solid transparent
+            &:hover
+                border-bottom-color: currentColor
     &__bottom
         border-top: 1px solid #285471
         padding-top: 40px

@@ -1,0 +1,25 @@
+section.instructions#instruction
+    +svg('img-big-blue-line', '0 0 1920 1146')
+    .wrapper
+        h2.instructions__title Инструкция по применению
+        .instructions__text Наша компания является официальным представителем завода по производству материалов для наружной рекламы. 
+        .instructions__list
+            .instructions__list-item
+                .instructions__list-item-img
+                    +svg('img-instruction1', '0 0 96 100', '96', '103')
+                .instructions__list-item-text
+                    strong  1. Очистить поверхность от грязи
+            .instructions__list-item
+                .instructions__list-item-img
+                    +svg('img-instruction2','0 0 82 94', '81', '103')
+                .instructions__list-item-text
+                    strong  2. Снять защитную плёнку
+            .instructions__list-item
+                .instructions__list-item-img
+                    +svg('img-instruction3', '0 0 97 85', '97', '103')
+                .instructions__list-item-text
+                    strong  3. Приклеить к поверхности
+                    span В случае, если изделие приклеено неровно — снять и переразместить.
+        a.instructions__video(href="https://www.youtube.com/watch?time_continue=1&v=m1k3Cpke4yU" data-fancybox="")
+            +svg('img-big-play', '0 0 120 120', '120')
+            img(src="../../assets/img/instructions-preview.png", alt="")

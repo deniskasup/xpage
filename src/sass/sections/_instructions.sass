@@ -1,0 +1,93 @@
+.instructions
+    z-index: 0
+    position: relative
+    margin-bottom: 90px
+    padding-top: 120px
+    +until-tablet
+        margin-bottom: 60px
+    & .icon-img-big-blue-line
+        top: 0
+        left: 0
+        position: absolute
+        height: 1146px
+        +media-from(1920px)
+            height: unset
+
+    &__video
+        display: flex
+        position: relative
+        background: #C4C4C4
+        border-radius: 10px
+        overflow: hidden
+        width: 100%
+        & img
+            width: 100%
+            height: 100%
+            object-fit: contain
+        &:hover
+            & svg
+                fill-opacity: 0.3
+        & svg
+            
+            transition-property: fill-opacity
+            transition-duration: .4s
+            pointer-events: none
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) scale(1.5)
+            position: absolute
+            fill-opacity: 0
+            +until-tablet
+                transform: translate(-50%, -50%) scale(1)
+    &__title
+        margin-bottom: 38px
+    &__text
+        max-width: 580px
+        text-align: center
+        line-height: 24px
+        margin-bottom: 68px
+        +until-tablet
+            margin-bottom: 40px
+    &__list
+        margin-bottom: 80px
+        width: 100%
+        display: flex
+        justify-content: center
+        +media-until(650px)
+            flex-direction: column
+            align-items: center
+        &-item
+            width: 100%
+            max-width: 270px
+            display: flex
+            flex-direction: column
+            align-items: center
+            &:not(:last-of-type)
+                margin-right: 160px
+                +until-desktop
+                    margin-right: 60px
+                +until-tablet
+                    margin-right: 30px
+                +media-until(650px)
+                    margin-right: 0
+                    margin-bottom: 30px
+                
+
+            &-img
+                margin-bottom: 40px
+                height: max-content
+                & svg
+                    // width: 100%
+                    // height: 100%
+                    fill: transparent
+            &-text
+                display: flex
+                flex-direction: column
+                align-items: center
+                & strong
+                    font-size: 18px
+                    text-align: center
+                & span
+                    text-align: center
+                    font-size: 14px
+                    margin-top: 15px

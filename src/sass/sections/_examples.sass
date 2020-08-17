@@ -16,6 +16,8 @@
                 position: static
         & .swiper-container
             width: 100%
+            +media-until(1235px)
+                width: 100vw
         & > .examples__slider-pagination.swiper-pagination
             bottom: -65px
             & .swiper-pagination-bullet
