@@ -1,7 +1,22 @@
 .examples
-    margin-bottom: 190px
+    position: relative
+    margin-bottom: 196px
     +until-tablet
         margin-bottom: 100px
+
+    & .icon-img-blue-bg
+        z-index: -1
+        transform: rotate(1deg)
+        width: 947px
+        height: 993px
+        top: -101px
+        fill: $blue
+        left: -751px
+        position: absolute
+        +media-until(1600px)
+            left: -850px
+        +media-until(1440px)
+            display: none
     &__title
         margin-bottom: 90px
         max-width: 635px

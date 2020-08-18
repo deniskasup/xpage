@@ -1,14 +1,14 @@
-<svg width="577" height="1349" viewBox="0 0 577 1349" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="680" height="796" viewBox="0 0 680 796" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d)">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="328" y="267" width="692" height="814">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M371.866 635.712C378.2 558.311 441.977 504.331 497.733 450.239C562.975 386.945 623.981 299.397 714.852 302.967C808.27 306.638 878.05 388.745 928.849 467.178C974.567 537.765 994.667 623.455 975.435 705.299C958.013 779.437 887.81 819.75 833.458 873.128C767.436 937.966 721.323 1055.12 629.272 1045.25C537.253 1035.39 515.573 912.085 466.348 833.767C425.881 769.382 365.666 711.482 371.866 635.712Z" fill="#59BBF2"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="11" y="10" width="657" height="777">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M45.5471 422.412C36.0264 347.806 85.6285 283.871 127.61 221.438C176.732 148.384 216.977 53.1997 303.792 38.3594C393.039 23.1031 475.621 86.9045 539.482 151.031C596.954 208.743 633.182 285.902 631.373 367.305C629.734 441.044 571.302 493.318 530.509 554.793C480.957 629.466 460.761 749.719 371.564 758.827C282.399 767.933 237.131 655.452 174.785 591.119C123.532 538.23 54.8672 495.447 45.5471 422.412Z" fill="#59BBF2"/>
 </mask>
 <g mask="url(#mask0)">
-<rect x="211.961" y="605.293" width="732.393" height="707.556" transform="rotate(-38.4233 211.961 605.293)" fill="#59BBF2"/>
+<rect x="-74.8662" y="440.2" width="626.151" height="578.387" transform="rotate(-50.3739 -74.8662 440.2)" fill="#59BBF2"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_d" x="324.562" y="267.831" width="699.102" height="820.563" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="7.87891" y="10.0811" width="663.485" height="784.205" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dy="4"/>

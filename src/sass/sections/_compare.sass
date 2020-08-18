@@ -1,5 +1,19 @@
 .compare
     margin-bottom: 65px
+    position: relative
+    & .icon-img-blue-bg
+        z-index: -1
+        transform: rotate(-1deg)
+        width: 949px
+        height: 1105px
+        top: -577px
+        fill: #59bbf2
+        right: -400px
+        position: absolute
+        +media-until(1600px)
+            right: -550px
+        +media-until(1440px)
+            display: none
     &__title
         max-width: 1000px
         margin-bottom: 115px
