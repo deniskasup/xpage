@@ -3,9 +3,7 @@ var gulp = require("gulp"),
     rename = require("gulp-rename"),
     postcss = require("gulp-postcss"),
     pug = require("gulp-pug"),
-    autoprefixer = require("autoprefixer"),
-    cssnano = require("cssnano"),
-    mqpacker = require("css-mqpacker");
+    cssnano = require("cssnano");
 
 function _sass() {
     return gulp
@@ -17,10 +15,7 @@ function _sass() {
 function _postcss() {
     return gulp
         .src("./dist/css/*.css")
-        .pipe(postcss([
-            autoprefixer(),
-            mqpacker()
-        ]))
+        .pipe(postcss())
         .pipe(gulp.dest('./dist/css/'));
 }
 

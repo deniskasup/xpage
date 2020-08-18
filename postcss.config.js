@@ -3,9 +3,7 @@ module.exports = {
         require('postcss-sort-media-queries')({
             sort: 'mobile-first'
         }),
-        require('autoprefixer')({
-            grid: true
-        }),
+        require('autoprefixer')('last 2 versions'),
         require('cssnano')
     ]
 }
