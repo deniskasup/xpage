@@ -12,9 +12,9 @@ import '@fancyapps/fancybox'
 
 // Swiper
 
-import Swiper, {Navigation, Pagination, Scrollbar, Autoplay} from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, EffectFade } from 'swiper';
 
-Swiper.use([Navigation, Pagination, Scrollbar, Autoplay]);
+Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, EffectFade]);
 
 
 // Burger
@@ -31,9 +31,43 @@ const examplesSlider = new Swiper('.examples__slider .swiper-container', {
         prevEl: '.examples__slider-buttons .swiper-button-prev'
     },
     pagination: {
-        el: '.swiper-pagination'
+        el: '.examples__slider .swiper-pagination'
     }
 })
+
+const typesPicturesSlider = new Swiper('.types-slider__pictures .swiper-container', {
+    slidesPerView: '1',
+    effect: 'fade',
+    allowTouchMove: false,
+    fadeEffect: {
+        crossFade: true
+    },
+    navigation: {
+        nextEl: '.types-slider__buttons .swiper-button-next',
+        prevEl: '.types-slider__buttons .swiper-button-prev'
+    },
+    pagination: {
+        el: '.types-slider .swiper-pagination'
+    }
+})
+
+
+const typesTextSlider = new Swiper('.types-slider__text .swiper-container', {
+    slidesPerView: '1',
+    effect: 'fade',
+    allowTouchMove: false,
+    fadeEffect: {
+        crossFade: true
+    },
+    navigation: {
+        nextEl: '.types-slider__buttons .swiper-button-next',
+        prevEl: '.types-slider__buttons .swiper-button-prev'
+    },
+    pagination: {
+        el: '.types-slider .swiper-pagination'
+    }
+})
+
 
 $(() => {
 

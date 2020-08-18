@@ -6,9 +6,9 @@ html(lang="ru")
         title SLK
     body
         //- MIXINS
-        include mixins.pug
+        include base/mixins.pug
         //- SVG-SPRITE
-        include svg-sprite.pug
+        include base/svg-sprite.pug
 
         //- mobile-menu
         include blocks/mobilemenu.pug
@@ -31,10 +31,14 @@ html(lang="ru")
             //- ADVANTAGES
             include sections/advantages.pug
             //- /ADVANTAGES
-
+            
             //- EXAMPLES
             include sections/examples.pug
             //- /EXAMPLES
+
+            //- TYPES SLIDER
+            include sections/types-slider.pug
+            //- /TYPES SLIDER
 
             //- INSTRUCTIONS
             include sections/instructions.pug

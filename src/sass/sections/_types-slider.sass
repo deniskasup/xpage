@@ -1,0 +1,113 @@
+.types-slider
+    position: relative
+    padding: 150px 0 350px
+    +until-desktop
+        padding: 100px 0 150px
+    +while-mob
+        padding-top: 50px
+    &__pagination
+        width: max-content
+        bottom: -73px
+        & .swiper-pagination-bullet
+            width: 7px
+            height: 7px
+            margin-right: 10px
+    &__buttons
+        display: flex
+        align-items: center
+        position: relative
+        margin-bottom: 85px
+        +until-desktop
+            margin-bottom: 0
+            position: absolute
+            bottom: -81px
+            right: 0
+        & .swiper-button-next, .swiper-button-prev
+            position: static
+            margin-top: 0
+            &::after
+                font-size: 22px
+                font-weight: bold
+        & .swiper-button-prev
+            margin-right: 25px
+    &__text
+        position: relative
+        width: 100%
+        max-width: 525px
+        align-self: flex-end
+        +media-until(1150px)
+            max-width: 450px
+        +until-desktop
+            max-width: unset
+            align-self: flex-start
+        & .swiper-container
+            width: 100%
+        &-slide
+            max-width: 525px
+            +media-until(1150px)
+                max-width: 450px
+            +until-desktop
+                max-width: unset
+            &-title
+                text-align: left
+                margin-bottom: 38px
+                +until-desktop
+                    text-align: center
+                    margin-bottom: 25px
+            & > p
+                margin-bottom: 42px
+                +until-desktop
+                    margin-bottom: 25px
+            &-info
+                display: flex
+                flex-direction: column
+                &-item
+                    margin-bottom: 15px
+                    display: flex
+                    +media-until(1150px)
+                        flex-direction: column
+                    & strong
+                        width: 100%
+                        max-width: 160px
+                        margin-right: 20px
+                        +media-until(1150px)
+                            margin-right: 0
+                            margin-bottom: 10px
+                    & p
+                        line-height: 120%
+    &__pictures
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 958px
+        width: 100%
+        max-width: 856px
+        top: 48px
+        position: absolute
+        +media-until(1660px)
+            max-width: 700px
+        +media-until(1330px)
+            width: 550px
+            height: 800px
+            top: 50%
+            transform: translateY(-50%)
+        +until-desktop
+            display: none
+        & .swiper-slide
+            & img
+                width: 100%
+                height: 100%
+                object-fit: contain
+        & > svg
+            pointer-events: none
+            z-index: 2
+            width: 1183px
+            height: 958px
+            position: absolute
+            top: 0
+            right: 0
+            +media-until(1330px)
+                top: unset
+                bottom: 0
+                width: 1000px
+                height: 100%
