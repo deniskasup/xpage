@@ -25,7 +25,6 @@ document.querySelector('.hamburger').addEventListener('click', event => {
 const examplesSlider = new Swiper('.examples__slider .swiper-container', {
     loop: true,
     slidesPerView: 'auto',
-    // spaceBetween: '30',
     navigation: {
         nextEl: '.examples__slider-buttons .swiper-button-next',
         prevEl: '.examples__slider-buttons .swiper-button-prev'
@@ -51,7 +50,6 @@ const typesPicturesSlider = new Swiper('.types-slider__pictures .swiper-containe
     }
 })
 
-
 const typesTextSlider = new Swiper('.types-slider__text .swiper-container', {
     slidesPerView: '1',
     effect: 'fade',
@@ -69,14 +67,24 @@ const typesTextSlider = new Swiper('.types-slider__text .swiper-container', {
 })
 
 
-$(() => {
-
-    $('[data-fancybox]').fancybox({
-        youtube: {
-            controls: 0,
-            showinfo: 0
-        }
-    })
-
-
+$('[data-fancybox]').fancybox({
+    youtube: {
+        controls: 0,
+        showinfo: 0
+    }
 })
+
+
+// types links
+{
+    const typeButtons = document.querySelectorAll('.types__card')
+    if (typeButtons) {
+        typeButtons.forEach(button => {
+            button.addEventListener('click', e => {
+                const slideIndex = (button.getAttribute('data-type'))
+                typesTextSlider.slideTo(slideIndex)
+                typesPicturesSlider.slideTo(slideIndex)
+            })
+        })
+    }
+}
